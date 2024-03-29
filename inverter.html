@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solar Sells Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <style>
+        #nav-hover:hover,
+        #nav-link:hover {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+
+        }
+
+        body {
+            background: lightgrey;
+
+        }
+
+        .navbar-toggler:focus {
+            outline: none !important;
+            box-shadow: none !important;
+
+        }
+
+        .dropdown-menu-end {
+            margin-right: 10%;
+            padding: 10px 20px;
+        }
+
+        #nav-link {
+            padding: 0px 50px;
+
+
+        }
+
+        .whatsapp,
+        .whatsapp:hover {
+            background: #25D366;
+            border-radius: 50px;
+            color: #fff;
+        }
+
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 50px;
+        }
+
+
+        @media (max-width: 970px) {
+            #nav-hover:hover {
+                color: #007bff;
+                width: 50px;
+            }
+
+
+            .dropdown-menu-end {
+                margin-right: 0px;
+                padding: 0px 0px;
+            }
+
+            #nav-link {
+                padding: 0px 10px;
+
+            }
+
+            .whatsapp-icon {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+            }
+
+
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <!-- Navigation top-->
+    <nav class="navbar bg-light navbar-expand-md  fixed-top">
+        <div class="container-fluid">
+            <a href="home.html" class="navbar-brand fw-bold col-8">
+                <img src="logo.png" alt="Logo" width="40" height="40" class="d-inline-block ">
+                SolarEco<span class="text-warning ">Solutions</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class=" navbar-toggler-icon icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="nav-hover" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- dropdown-->
+                        <a class="nav-link dropdown-toggle " data-bs-toggle="dropdown" id="nav-hover" href="#">Products</a>
+                        <ul class="dropdown-menu dropdown-menu-end  bg-light">
+                            <li>
+                                <a class="dropdown-item" href="solar.html">Solar Panels</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="battery.html">Solar Batteries</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="inverter.html">Inverters</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="controller.html">Solar Controllers</a>
+                            </li>
+
+
+                            <li>
+                                <a class="dropdown-item" href="kit">Solar Install Kits</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">Installation Services</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">Installation Guide</a>
+                            </li>
+
+                        </ul>
+
+                        <!-- dropdown end -->
+
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-hover" href="#">Bios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-hover" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-hover" href="#">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </nav>
+
+
+
+    <!-- Navigation bottom -->
+    <nav class="navbar bg-light navbar-expand fixed-bottom ">
+        <div class="container-fluid">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item text-center">
+                    <a class="nav-link" id="nav-link" href="#">
+                        <i class="bi bi-journal"></i>
+                        <div>Blogs</div>
+                    </a>
+                </li>
+                <li class="nav-item text-center">
+                    <a class="nav-link" id="nav-link" href="#">
+                        <i class="bi bi-gift"></i>
+                        <div>Offers</div>
+                    </a>
+                </li>
+                <li class="nav-item text-center">
+                    <a class="nav-link" id="nav-link" href="#">
+                        <i class="bi bi-star"></i>
+                        <div>Reviews</div>
+                    </a>
+                </li>
+                <li class="nav-item text-center lg-p-4">
+                    <a class="nav-link" id="nav-link" href="#">
+                        <i class="bi bi-person"></i>
+                        <div>Account</div>
+                    </a>
+                </li>
+                <li class="nav-item text-center ">
+
+                    <a href="index" id="cartBtn nav-link" class="btn text-warning ">
+                        <i id="cartIcon" class="bi bi-cart"></i>
+                        <div id="cartCount">0</div>
+                    </a>
+
+
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- WhatsApp Icon -->
+    <nav class="whatsapp-icon fixed-bottom d-flex justify-content-end p-3 mb-5 mr-4">
+        <a href="" target="_blank" class="btn whatsapp">
+            <i class="bi bi-whatsapp fs-5"></i>
+        </a>
+    </nav>
+    <!-- product heading-->
+    <section class="pt-5 mt-5">
+        <div class="container-fluid">
+            <h3 class="text-center my-0">Find the Perfect Inverter for Your Solar System</h3>
+            <p class="text-center my-0 px-md-2">Upgrade your solar power setup with our high-performance inverters. Whether you need a grid-tied, off-grid, or hybrid solution, we have inverters to suit your requirements. Experience seamless power conversion and efficient energy utilization with our advanced inverter technology.</p>
+
+
+            <div class="container py-2">
+                <div class="col-lg-6 ">
+                    <form class="d-flex border -primary rounded bg-light">
+                        <input class="form-control me-2 border-0 bg-light shadow-none" type="search" placeholder="Search products......" aria-label="Search">
+                        <button class="btn border-0" type="submit">
+                            <i class="bi bi-search text-primary "></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row px-md-3 pt-4">
+                <!-- Image 1 -->
+                <div class="col-md-4">
+                    <div class="card mb-4 ">
+                        <img src="in2.jpg" class="card-img-top " alt="Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title my-0">5KW Off Grid Hybrid Solar Inverter</h5>
+                            <p class="my-0">$1000</p>
+
+                            <div class="d-flex justify-content-between  align-items-center  ">
+                                <p class=" text-warning fs-3 card-text ">★★★★★</p>
+                                <button class="btn btn-warning addToCartBtn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 2-->
+                <div class="col-md-4">
+                    <div class="card mb-4 ">
+                        <img src="in3.jpg" class="card-img-top " alt="Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title my-0">1000W MPPT VEVOR Grid Tie Solar Inverter</h5>
+                            <p class="my-0">$150</p>
+
+                            <div class="d-flex justify-content-between  align-items-center  ">
+                                <p class=" text-warning fs-3 card-text">★★★★☆</p>
+                                <button class="btn btn-warning addToCartBtn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="in6.jpg" class="card-img-top" alt="Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title my-0">GSL 6KVA/48V Smart Solar Hybrid Inverter</h5>
+                            <p class="my-0">$310</p>
+
+                            <div class="d-flex justify-content-between  align-items-center  ">
+                                <p class=" text-warning fs-3 card-text ">★★★★★</p>
+                                <button class="btn btn-warning addToCartBtn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="col-md-4">
+                    <div class="card mb-4 ">
+                        <img src="in5.jpg" class="card-img-top" alt="Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title my-0">Smarten 1000VA 12V Solar Hybrid Inverter</h5>
+                            <p class="my-0">$300</p>
+
+                            <div class="d-flex justify-content-between align-items-center  ">
+                                <p class=" text-warning fs-3 card-text">★★★☆☆</p>
+                                <button class="btn btn-warning addToCartBtn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="col-md-4">
+                    <div class="card mb-4 ">
+                        <img src="in.jpg" class="card-img-top" alt="Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title my-0">5KW Modular Online (4000W MPPT)Solar Inverter</h5>
+                            <p class="my-0">$900</p>
+
+                            <div class="d-flex justify-content-between align-items-center  ">
+                                <p class=" text-warning fs-3 card-text">★★★☆☆</p>
+                                <button class="btn btn-warning addToCartBtn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 6 -->
+
+                <div class="col-md-4">
+                    <div class="card mb-4 ">
+                        <img src="in10.jpg" class="card-img-top" alt="Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title my-0">Qoltec Modular Hybrid Solar  Inverter Off-Grid 5KW/80Ah</h5>
+                            <p class="my-0">$600</p>
+
+                            <div class="d-flex justify-content-between align-items-center  ">
+                                <p class=" text-warning fs-3 card-text">★★★☆☆</p>
+                                <button class="btn btn-warning addToCartBtn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image 7 -->
+
+                <div class="col-md-4">
+                    <div class="card mb-4 ">
+                        <img src="in4.jpg" class="card-img-top" alt="Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title my-0">Smarten 1000VA 12V Solar Hybrid Inverter (1KVA)</h5>
+                            <p class="my-0">$350</p>
+
+                            <div class="d-flex justify-content-between align-items-center  ">
+                                <p class=" text-warning fs-3 card-text">★★★☆☆</p>
+                                <button class="btn btn-warning addToCartBtn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Image 8 -->
+                <div class="col-md-4">
+                    <div class="card mb-4 ">
+                        <img src="in9.jpg" class="card-img-top" alt="Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title my-0">PSC Solar 6.0KVA/40V OGM Hybrid Solar Inverter</h5>
+                            <p class="my-0">$410</p>
+
+                            <div class="d-flex justify-content-between align-items-center  ">
+                                <p class=" text-warning fs-3 card-text">★★★☆☆</p>
+                                <button class="btn btn-warning addToCartBtn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image 9 -->
+                <div class="col-md-4">
+                    <div class="card mb-4 ">
+                        <img src="in1.jpg" class="card-img-top" alt="Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title my-0">PSC Solar 6.0KVA/40V OGM Hybrid Solar Inverter</h5>
+                            <p class="my-0">$410</p>
+
+                            <div class="d-flex justify-content-between align-items-center  ">
+                                <p class=" text-warning fs-3 card-text">★★★☆☆</p>
+                                <button class="btn btn-warning addToCartBtn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ </div>
+ 
+   </div>
+  </section>
+  
+  
+  <section class="pt-5 mb-5 pb-5">
+      <div class="container-fluid ">
+               <div class="d-flex justify-content-center py-0 px-md-3 ">
+                   <p>You may also like</p>
+                   <a href="#" class="ms-auto text-dark">view all</a>
+               </div>
+       
+               <div class="swiper px-md-3 ">
+                   <div class="swiper-wrapper">
+       
+                       <div class="card swiper-slide ">
+                           <img src="c4.jpg" class="card-img-top " alt="Image 1">
+                           <div class="card-body">
+                               <h5 class="card-title my-0">8MP/4K Dual Linkage Motion Detective CCTV</h5>
+                               <p class="my-0">$600</p>
+       
+                               <div class="d-flex justify-content-between  align-items-center  ">
+                                   <p class=" text-warning fs-3 card-text ">★★★★★</p>
+                                   <button class="btn btn-warning addToCartBtn">Add to Cart</button>
+       
+                               </div>
+                           </div>
+                       </div>
+       
+                       <div class="card swiper-slide ">
+                           <img src="c5.jpg" class="card-img-top " alt="Image 1">
+                           <div class="card-body">
+                               <h5 class="card-title my-0">KJT 300W Solar Street Light Led</h5>
+                               <p class="my-0">$90</p>
+       
+                               <div class="d-flex justify-content-between  align-items-center  ">
+                                   <p class=" text-warning fs-3 card-text">★★★★☆</p>
+                                   <button class="btn btn-warning addToCartBtn">Add to Cart</button>
+                               </div>
+                           </div>
+                       </div>
+       
+                       <div class="card swiper-slide ">
+                           <img src="c9.jpg" class="card-img-top" alt="Image 1">
+                           <div class="card-body">
+                               <h5 class="card-title my-0">500W Led Solar Street Light</h5>
+                               <p class="my-0">$100</p>
+       
+                               <div class="d-flex justify-content-between  align-items-center  ">
+                                   <p class=" text-warning fs-3 card-text ">★★★★★</p>
+                                   <button class="btn btn-warning addToCartBtn">Add to Cart</button>
+                               </div>
+                           </div>
+                       </div>
+       
+       
+       
+                       <div class="card swiper-slide ">
+                           <img src="c3.jpg" class="card-img-top" alt="Image 1">
+                           <div class="card-body">
+                               <h5 class="card-title my-0">Rotational Solar Powered 4G Intelligent</h5>
+                               <p class="my-0">$550</p>
+       
+                               <div class="d-flex justify-content-between align-items-center  ">
+                                   <p class=" text-warning fs-3 card-text">★★★☆☆</p>
+                                   <button class="btn btn-warning addToCartBtn">Add to Cart</button>
+                               </div>
+                           </div>
+                       </div>
+       
+                       <div class="card swiper-slide ">
+                           <img src="c7.jpg" class="card-img-top" alt="Image 1">
+                           <div class="card-body">
+                               <h5 class="card-title my-0">30W Solar Street Light </h5>
+                               <p class="my-0">$60</p>
+       
+                               <div class="d-flex justify-content-between  align-items-center ">
+                                   <p class=" text-warning fs-3 card-text">★★★★☆</p>
+                                   <button class="btn btn-warning addToCartBtn">Add to Cart</button>
+                               </div>
+                           </div>
+                       </div>
+       
+                   </div>
+                   
+                   
+                   
+                   
+              </div>     
+       </div>
+      </div>
+  </section>
+  
+  
+  <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+$(document).ready(function() {
+    var swiperSection = new Swiper('.swiper', {
+        autoplay: {
+            delay: 4000, // Change this value for section 1
+            disableOnInteraction: false,
+        },
+        slidesPerView: 'auto',
+        spaceBetween: 20, // Adjust this value as needed
+        direction: 'horizontal',
+        loop: true,
+        breakpoints: {
+            
+            760: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        },
+    });
+
+    
+});
+
+$(document).ready(function() {
+    var cartCount = 0;
+
+    $(".addToCartBtn").click(function() {
+        cartCount++;
+        $("#cartCount").text(cartCount);
+        $("#cartIcon").removeClass("bi-cart").addClass("bi-cart-fill");
+    });
+});
+
+
+
+</script>
+
+</body>
+
+</html>
+                
